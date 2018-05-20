@@ -7,7 +7,7 @@
 {% extends 'layouts/application.html' %}
 
 {% block content %}
-<div class="products-container">
+<div class="products">
   <div class="product p-0 -active">
     <img src="/images/p-0.png">
     <p>product 1</p>
@@ -27,5 +27,11 @@
     <button class="control" data-increment="1">Next</button>
   </div>
 
+  <h1>Shop</h1>
+
+  <div id="product-details">
+    <h2 class="product-name">Purifying Facial Cream</h2>
+    <p class="product-price">$56.00</p>
+  </div>
 </div>
 {% endblock %}

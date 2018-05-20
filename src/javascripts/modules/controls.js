@@ -8,16 +8,19 @@ export default class Controls {
   }
 
   init() {
-    let buttons        = this.el.getElementsByClassName('control')
-    this.prevBtn       = buttons[0]
-    this.nextBtn       = buttons[1]
+    let buttons         = this.el.getElementsByClassName('control')
+    this.prevBtn        = buttons[0]
+    this.nextBtn        = buttons[1]
 
-    this.slides        = [].slice.call(document.getElementsByClassName('product'))
-    this.slidesMap     = this.cacheDetails()
-    this.slidesLength  = this.slides.length - 1
+    this.slides         = [].slice.call(document.getElementsByClassName('product'))
+    this.slidesMap      = this.cacheDetails()
+    this.slidesLength   = this.slides.length - 1
 
-    this.current       = 0
-    this.transitionDur = 2000
+    this.current        = 0
+    this.transitionDur  = 2000
+
+    this.productDetails = document.getElementById('product-details')
+    this.productName    = this.productDetails.getElementsByClassName('product-name')[0]
   }
 
   cacheDetails() {
@@ -54,6 +57,7 @@ export default class Controls {
     let exitDir   = increment === 1 ? 'Right' : 'Left'
 
     this.moveSlides(enterDir, exitDir)
+    this.updateProductDetails()
     this.removeClass(enterDir, exitDir, num)
   }
 
@@ -77,10 +81,21 @@ export default class Controls {
     this.activeSlide.classList.remove('-active')
   }
 
+  updateProductDetails() {
+    this.productDetails.classList.add('-exitAnim')
+
+    setTimeout(() => {
+      this.productName.innerHTML = "Jelly Cleanser"
+      this.productDetails.classList.remove('-exitAnim')
+      this.productDetails.classList.add('-enterAnim')
+    }, ((this.transitionDur / 2) - 300))
+  }
+
   removeClass(enDir, exDir, n) {
     setTimeout(() => {
       this.activeSlide.classList.remove(`-exit${exDir}`)
       this.newSlide.classList.remove(`-enter${enDir}`)
+      this.productDetails.classList.remove('-enterAnim')
 
       this.setActive(n)
     }, this.transitionDur)

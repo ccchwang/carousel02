@@ -3,14 +3,14 @@
 
 $transition-dur: 2s;
 
-.products-container,
+.products,
 .description {
   height: 100vh;
   width: 50vw;
   float: left;
 }
 
-.products-container {
+.products {
   background-color: #c0bdbc;
   display: flex;
   justify-content: center;
@@ -64,5 +64,38 @@ $transition-dur: 2s;
 
   &.-enterRight {
     animation: enterRight $transition-dur forwards;
+  }
+}
+
+#product-details {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.product-name,
+.product-price {
+  margin: 30px 0;
+}
+
+@keyframes enter {
+  0% {
+    opacity: 0;
+    transform: translateY(20px)
+  }
+  100% {
+    transform: translateY(0)
+  }
+}
+
+.product-name {
+  .-exitAnim & {
+    opacity: 0.2;
+    transform: translateY(-20px);
+    transition: ($transition-dur / 2);
+  }
+
+  .-enterAnim & {
+    animation: enter ($transition-dur / 2 + 0.3) forwards;
   }
 }
