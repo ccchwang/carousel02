@@ -9,6 +9,7 @@
     "start": "yarn run blendid"
   },
   "dependencies": {
-    "blendid": "^4.4.3"
+    "blendid": "^4.4.3",
+    "lodash.throttle": "^4.1.1"
   }
 }

@@ -1,24 +1,68 @@
+@import "base/reset";
 @import "base/typography";
 
+$transition-dur: 2s;
 
-.slider {
-  height: 400px;
-	width: 100%;
-	display: flex;
-  overflow-x: scroll;
-	scroll-behavior: smooth;
-
-  // &::-webkit-scrollbar {
-  //   display: none;
-  // }
+.products-container,
+.description {
+  height: 100vh;
+  width: 50vw;
+  float: left;
 }
 
-.slide {
-  background: turquoise;
-  flex-basis: 100%;
-  flex-shrink: 0;
+.products-container {
+  background-color: #c0bdbc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
 
-  &:nth-child(even) {
-    background: magenta;
+@keyframes enterLeft {
+  0% {
+    transform: translate(-300px, 300px);
+  }
+}
+
+@keyframes enterRight {
+  0% {
+    transform: translate(300px, -300px);
+  }
+}
+
+.product {
+  transition: 0s;
+  position: absolute;
+  opacity: 0;
+
+  img {
+    width: 200px;
+  }
+
+  &.-active,
+  &.-exitRight,
+  &.-exitLeft {
+    transition: $transition-dur;
+  }
+
+  &.-active {
+    opacity: 1;
+  }
+
+  &.-exitRight {
+    transform: translate(300px, -300px);
+  }
+
+  &.-exitLeft {
+    transform: translate(-300px, 300px);
+  }
+
+  &.-enterLeft {
+    animation: enterLeft $transition-dur forwards;
+  }
+
+  &.-enterRight {
+    animation: enterRight $transition-dur forwards;
   }
 }

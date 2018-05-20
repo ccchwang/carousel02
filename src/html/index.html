@@ -7,25 +7,25 @@
 {% extends 'layouts/application.html' %}
 
 {% block content %}
-<div class="slider">
-  <div class="slide" id="slide-1">
-    <h1>Slide 1</h1>
+<div class="products-container">
+  <div class="product p-0 -active">
+    <img src="/images/p-0.png">
+    <p>product 1</p>
   </div>
-  <div class="slide" id="slide-2">
-    <h1>Slide 2</h1>
+  <div class="product p-1">
+    <img src="/images/p-1.png">
+    <p>product 2</p>
   </div>
-  <div class="slide" id="slide-3">
-    <h1>Slide 3</h1>
-  </div>
-  <div class="slide" id="slide-4">
-    <h1>Slide 4</h1>
+  <div class="product p-2">
+    <img src="/images/p-2.png">
+    <p>product 3</p>
   </div>
 </div>
+<div class="description">
+  <div class="controls" data-module="controls">
+    <button class="control" data-increment="-1">Previous</button>
+    <button class="control" data-increment="1">Next</button>
+  </div>
 
-<div id="buttons">
-	<a class="button" href="#slide-1" data-slide="1">1</a>
-	<a class="button" href="#slide-2" data-slide="2">2</a>
-	<a class="button" href="#slide-3" data-slide="3">3</a>
-	<a class="button" href="#slide-4" data-slide="4">4</a>
 </div>
 {% endblock %}
