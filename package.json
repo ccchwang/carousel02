@@ -5,6 +5,9 @@
   "repository": "git@github.com:chloehwang/carousel02.git",
   "author": "Chloe Hwang <c.chloeh@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "yarn run blendid"
+  },
   "dependencies": {
     "blendid": "^4.4.3"
   }
