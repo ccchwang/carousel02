@@ -1,4 +1,5 @@
 import throttle from "lodash.throttle"
+import { products } from "../../html/data/global.json"
 
 export default class Controls {
   constructor(el) {
@@ -40,7 +41,7 @@ export default class Controls {
   bindEvents() {
     this.el.addEventListener('click', throttle(
       this.onClick,
-      this.transitionDur + 10
+      this.transitionDur + 50
     ))
   }
 
@@ -57,7 +58,7 @@ export default class Controls {
     let exitDir   = increment === 1 ? 'Right' : 'Left'
 
     this.moveSlides(enterDir, exitDir)
-    this.updateProductDetails()
+    this.updateProductDetails(num)
     this.removeClass(enterDir, exitDir, num)
   }
 
@@ -81,13 +82,13 @@ export default class Controls {
     this.activeSlide.classList.remove('-active')
   }
 
-  updateProductDetails() {
+  updateProductDetails(n) {
     this.productDetails.classList.add('-exitAnim')
 
     setTimeout(() => {
-      this.productName.innerHTML = "Jelly Cleanser"
       this.productDetails.classList.remove('-exitAnim')
       this.productDetails.classList.add('-enterAnim')
+      this.productName.innerHTML = products[n].name
     }, ((this.transitionDur / 2) - 300))
   }
 

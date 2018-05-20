@@ -1,3 +1,16 @@
 {
-  "message": "Blendid!"
+  "products": [
+    {
+      "name": "Purifying Facial Cleanser",
+      "price": "$56.00"
+    },
+    {
+      "name": "Milky Jelly Cleanser",
+      "price": "$39.00"
+    },
+    {
+      "name": "Fresh Facial Oil",
+      "price": "$42.00"
+    }
+  ]
 }
