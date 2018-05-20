@@ -20,7 +20,8 @@
   margin: 30px 0;
 }
 
-.product-name {
+.product-name,
+.product-price {
   .-enter & {
     animation: enterText ($transition-dur / 2 + 0.3) forwards;
   }

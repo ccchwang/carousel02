@@ -11,13 +11,13 @@
   {% for product in products %}
     <div class="product p-{{ loop.index }} {% if loop.index === 1 %}-active{% endif %}">
       <img src="/images/p-{{ loop.index }}.png">
-      <p>{{ product.name }}</p>
+      <p>{{ loop.index }} {{ product.name }}</p>
     </div>
   {% endfor %}
 
 </div>
 <div class="description">
-  <div class="controls" data-module="controls">
+  <div class="controls" data-module="carousel">
     <button class="control" data-increment="-1">Previous</button>
     <button class="control" data-increment="1">Next</button>
   </div>
@@ -26,6 +26,7 @@
 
   <div id="product-details">
     <h2 class="product-name">{{ products[0].name }}</h2>
+    <p>Normal to dry skin</p>
     <p class="product-price">{{ products[0].price }}</p>
   </div>
 </div>

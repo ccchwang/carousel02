@@ -18,6 +18,7 @@ export default class Controls {
 
     this.productDetails = document.getElementById('product-details')
     this.productName    = this.productDetails.getElementsByClassName('product-name')[0]
+    this.productPrice   = this.productDetails.getElementsByClassName('product-price')[0]
   }
 
   cacheDetails() {
@@ -96,7 +97,8 @@ export default class Controls {
     setTimeout(() => {
       this.productDetails.classList.remove('-exit')
       this.productDetails.classList.add('-enter')
-      this.productName.innerHTML = products[n].name
+      this.productName.innerHTML  = products[n].name
+      this.productPrice.innerHTML = products[n].price
     }, ((this.transitionDur / 2) - 300))
   }
 
