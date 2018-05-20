@@ -1,0 +1,24 @@
+@import "base/typography";
+
+
+.slider {
+  height: 400px;
+	width: 100%;
+	display: flex;
+  overflow-x: scroll;
+	scroll-behavior: smooth;
+
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
+}
+
+.slide {
+  background: turquoise;
+  flex-basis: 100%;
+  flex-shrink: 0;
+
+  &:nth-child(even) {
+    background: magenta;
+  }
+}
