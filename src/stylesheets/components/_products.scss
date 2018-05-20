@@ -1,0 +1,49 @@
+@keyframes enterProduct {
+  0% {
+    transform: translate($position2-img, $position1-img);
+  }
+}
+
+.products,
+.description {
+  height: 100vh;
+  width: 50vw;
+  float: left;
+}
+
+.products {
+  background-color: #c0bdbc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.product {
+  transition: 0s;
+  position: absolute;
+  opacity: 0;
+  --dir: 1;
+
+  img {
+    width: 200px;
+  }
+
+  &.-active,
+  &.-exit {
+    transition: $transition-dur;
+  }
+
+  &.-active {
+    opacity: 1;
+  }
+
+  &.-exit {
+    transform: translate($position1-img, $position2-img);
+  }
+
+  &.-enter {
+    animation: enterProduct $transition-dur forwards;
+  }
+}

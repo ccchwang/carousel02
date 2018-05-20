@@ -9,10 +9,6 @@ export default class Controls {
   }
 
   init() {
-    let buttons         = this.el.getElementsByClassName('control')
-    this.prevBtn        = buttons[0]
-    this.nextBtn        = buttons[1]
-
     this.slides         = [].slice.call(document.getElementsByClassName('product'))
     this.slidesMap      = this.cacheDetails()
     this.slidesLength   = this.slides.length - 1
@@ -54,12 +50,11 @@ export default class Controls {
 
     let num       = this.calcNum(increment)
     this.newSlide = this.slidesMap[num]
-    let enterDir  = increment === 1 ? 'Left' : 'Right'
-    let exitDir   = increment === 1 ? 'Right' : 'Left'
 
-    this.moveSlides(enterDir, exitDir)
+    this.setCssVariable(increment)
+    this.moveSlides()
     this.updateProductDetails(num)
-    this.removeClass(enterDir, exitDir, num)
+    this.removeClass(num)
   }
 
   calcNum(increment) {
@@ -75,28 +70,41 @@ export default class Controls {
     return num
   }
 
-  moveSlides(enDir, exDir) {
-    this.newSlide.classList.add(`-enter${enDir}`)
+  setCssVariable(increment) {
+    if (increment === 1) {
+      this.activeSlide.style.setProperty('--dir', '1');
+      this.newSlide.style.setProperty('--dir', '1');
+      this.productDetails.style.setProperty('--dir', '1');
+    }
+    else {
+      this.activeSlide.style.setProperty('--dir', '-1');
+      this.newSlide.style.setProperty('--dir', '-1');
+      this.productDetails.style.setProperty('--dir', '-1');
+    }
+  }
+
+  moveSlides() {
+    this.newSlide.classList.add('-enter')
     this.newSlide.classList.add('-active')
-    this.activeSlide.classList.add(`-exit${exDir}`)
+    this.activeSlide.classList.add('-exit')
     this.activeSlide.classList.remove('-active')
   }
 
   updateProductDetails(n) {
-    this.productDetails.classList.add('-exitAnim')
+    this.productDetails.classList.add('-exit')
 
     setTimeout(() => {
-      this.productDetails.classList.remove('-exitAnim')
-      this.productDetails.classList.add('-enterAnim')
+      this.productDetails.classList.remove('-exit')
+      this.productDetails.classList.add('-enter')
       this.productName.innerHTML = products[n].name
     }, ((this.transitionDur / 2) - 300))
   }
 
-  removeClass(enDir, exDir, n) {
+  removeClass(n) {
     setTimeout(() => {
-      this.activeSlide.classList.remove(`-exit${exDir}`)
-      this.newSlide.classList.remove(`-enter${enDir}`)
-      this.productDetails.classList.remove('-enterAnim')
+      this.activeSlide.classList.remove('-exit')
+      this.newSlide.classList.remove('-enter')
+      this.productDetails.classList.remove('-enter')
 
       this.setActive(n)
     }, this.transitionDur)

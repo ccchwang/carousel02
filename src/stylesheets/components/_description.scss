@@ -1,0 +1,33 @@
+@keyframes enterText {
+  0% {
+    opacity: 0;
+    transform: translateY($position1-text)
+  }
+  100% {
+    transform: translateY(0)
+  }
+}
+
+#product-details {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  --dir: 1;
+}
+
+.product-name,
+.product-price {
+  margin: 30px 0;
+}
+
+.product-name {
+  .-enter & {
+    animation: enterText ($transition-dur / 2 + 0.3) forwards;
+  }
+
+  .-exit & {
+    opacity: 0.2;
+    transform: translateY($position2-text);
+    transition: ($transition-dur / 2);
+  }
+}
