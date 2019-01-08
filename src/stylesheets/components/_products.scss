@@ -12,7 +12,7 @@
   overflow: hidden;
   perspective: 1000px;
   position: relative;
-  transition: background-color $transition-dur;
+  transition: background-color $transition-dur $transition-ease;
 
   .-change-bg & {
     background-color: #CAC8B1;
@@ -30,7 +30,7 @@
 
   &.-active,
   &.-exit {
-    transition: $transition-dur;
+    transition: $transition-dur $transition-ease;
   }
 
   &.-active {

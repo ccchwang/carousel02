@@ -1,9 +1,11 @@
-$transition-dur: 2s;
-$position1-img:  calc(100px * var(--dir));
-$position2-img:  calc(-600px * var(--dir));
-$position1-text: calc(15px * var(--dir));
-$position2-text: calc(-15px * var(--dir));
-$perspective:    calc(1500px * var(--dir));
+$transition-dur : 2s;
+$transition-ease: cubic-bezier(0.39, 0.575, 0.565, 1);
+
+$position1-img  : calc(100px * var(--dir));
+$position2-img  : calc(-600px * var(--dir));
+$position1-text : calc(6px * var(--dir));
+$position2-text : calc(-15px * var(--dir));
+$perspective    : calc(1500px * var(--dir));
 
 
 @import "base/reset";
