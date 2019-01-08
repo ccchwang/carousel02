@@ -9,7 +9,7 @@
 }
 
 .description {
-  padding: 6.3rem 25px;
+  padding: 6.3rem 1.5625rem;
 }
 
 .product-name,
@@ -29,15 +29,18 @@
 
 .product-name {
   font-size: 1.2rem;
-  margin-top: 2rem;
+  line-height: 1.2;
+  margin-top: 1rem;
 }
 
 .product-price {
   // 0.7 comes from setTimeout that adds ".-enter"
   animation-delay: $transition-dur - 0.7 - ($transition-dur / 2 + 0.1) !important;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
 }
 
 .product-subtitle {
   @include emphasis-text;
-  margin: 2rem 0;
+  margin: 2.25rem 0;
 }

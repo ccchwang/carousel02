@@ -34,3 +34,6 @@ ol, ul {
 *:after {
   box-sizing: border-box;
 }
+*:focus {
+  outline: none;
+}

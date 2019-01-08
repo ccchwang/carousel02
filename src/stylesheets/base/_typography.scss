@@ -1,7 +1,13 @@
 body {
+  color: #0B0B09;
   font-family: 'Poppins', sans-serif;
 }
 
 .emphasis-text {
   @include emphasis-text;
+}
+
+.gray-text {
+  color: #c0bdbc;
+  font-weight: 700;
 }
