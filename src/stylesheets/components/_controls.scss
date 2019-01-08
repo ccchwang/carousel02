@@ -2,11 +2,18 @@
   @include emphasis-text;
   background: none;
   border: none;
+  box-shadow: inset 0 -6px 0 0 rgba(#E68B0C, 0.3);
   cursor: pointer;
   float: left;
-  margin-top: 6rem;
+  margin: 6rem 0.5rem 1.5rem;
+  padding: 0 2px 2px;
+  transition: box-shadow .1s;
 
   &.-next {
     float: right;
+  }
+
+  &:hover {
+    box-shadow: inset 0 -40px 0 0 rgba(#E68B0C, 0.3);
   }
 }

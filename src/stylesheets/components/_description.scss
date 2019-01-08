@@ -9,7 +9,7 @@
 }
 
 .description {
-  padding: 6.3rem 1.5625rem;
+  padding: 6.3rem 1rem;
 }
 
 .product-name,
@@ -23,7 +23,7 @@
   .-exit & {
     opacity: 0;
     transform: translateY($position2-text);
-    transition: ($transition-dur / 2) $transition-ease;
+    transition: ($transition-dur / 2 - 0.2) $transition-ease;
   }
 }
 

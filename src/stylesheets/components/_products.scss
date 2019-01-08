@@ -6,7 +6,7 @@
 
 .products {
   align-items: center;
-  background-color: #C0BDBC;
+  background-color: #CAC8B1;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -15,7 +15,7 @@
   transition: background-color $transition-dur $transition-ease;
 
   .-change-bg & {
-    background-color: #CAC8B1;
+    background-color: #C0BDBC;
   }
 }
 

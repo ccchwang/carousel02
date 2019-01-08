@@ -1,16 +1,16 @@
 {
   "products": [
     {
-      "name": "Purifying Cream Cleanser",
-      "price": "$42.00",
-      "image": "p-3.png",
-      "size": "3.4 fl oz"
-    },
-    {
       "name": "Lightweight Hydrating Serum",
       "price": "$56.00",
       "image": "p-1.png",
       "size": "1 fl oz"
+    },
+    {
+      "name": "Purifying Cream Cleanser",
+      "price": "$42.00",
+      "image": "p-3.png",
+      "size": "3.4 fl oz"
     },
     {
       "name": "Aromatique Hand Wash",
