@@ -6,6 +6,7 @@ $position2-text: calc(-15px * var(--dir));
 
 
 @import "base/reset";
+@import "base/mixins";
 @import "base/typography";
 
 @import "components/layout";

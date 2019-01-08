@@ -1,16 +1,19 @@
 {
   "products": [
     {
-      "name": "Purifying Facial Cleanser",
-      "price": "$56.00"
+      "name": "Lightweight Rosehip Hydrating Serum",
+      "price": "$56.00",
+      "imageFile": "p-1.png"
     },
     {
-      "name": "Milky Jelly Cleanser",
-      "price": "$39.00"
+      "name": "Purifying Facial Cream Cleanser",
+      "price": "$42.00",
+      "imageFile": "p-3.png"
     },
     {
-      "name": "Fresh Facial Oil",
-      "price": "$42.00"
+      "name": "Chamomile Concentrate Masque",
+      "price": "$39.00",
+      "imageFile": "p-2.png"
     }
   ]
 }

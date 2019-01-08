@@ -8,30 +8,35 @@
   }
 }
 
-#product-details {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
+.description {
+  padding: 6.3rem 25px;
 }
 
 .product-name,
 .product-price {
-  margin: 30px 0;
-}
+  font-weight: 600;
 
-.product-name,
-.product-price {
   .-enter & {
     animation: enterText ($transition-dur / 2 + 0.3) both;
   }
 
   .-exit & {
-    opacity: 0.2;
+    opacity: 0;
     transform: translateY($position2-text);
     transition: ($transition-dur / 2);
   }
 }
 
+.product-name {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
 .product-price {
   animation-delay: 0.5s !important;
+}
+
+.product-subtitle {
+  @include emphasis-text;
+  margin: 2rem 0;
 }
