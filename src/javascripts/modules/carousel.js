@@ -16,7 +16,7 @@ export default class Controls {
     this.current        = 0
     this.transitionDur  = 2000
 
-    this.wrapper        = document.getElementById('wrapper')
+    this.container      = document.getElementById('container')
     this.productDetails = document.getElementById('product-details')
     this.productName    = this.productDetails.getElementsByClassName('product-name')[0]
     this.productPrice   = this.productDetails.getElementsByClassName('product-price')[0]
@@ -74,10 +74,10 @@ export default class Controls {
 
   setCssVariable(increment) {
     if (increment === 1) {
-      this.wrapper.style.setProperty('--dir', '1');
+      this.container.style.setProperty('--dir', '1');
     }
     else {
-      this.wrapper.style.setProperty('--dir', '-1');
+      this.container.style.setProperty('--dir', '-1');
     }
   }
 
