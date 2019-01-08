@@ -1,6 +1,6 @@
 @keyframes enterProduct {
   0% {
-    transform: translate($position2-img, $position1-img);
+    transform: translate3d($position2-img, $position1-img, $perspective);
   }
 }
 
@@ -11,6 +11,7 @@
   align-items: center;
   overflow: hidden;
   position: relative;
+  perspective: 1000px;
 }
 
 .product {
@@ -19,7 +20,7 @@
   opacity: 0;
 
   img {
-    width: 400px;
+    width: 350px;
   }
 
   &.-active,
@@ -32,7 +33,11 @@
   }
 
   &.-exit {
-    transform: translate($position1-img, $position2-img);
+    transform: translate3d(
+      calc(#{$position2-img} * -1),
+      calc(#{$position1-img} * -1),
+      calc(#{$perspective} * -1)
+    );
   }
 
   &.-enter {
