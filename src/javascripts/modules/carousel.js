@@ -46,17 +46,15 @@ export default class Controls {
   onClick = (e) => {
     let increment = parseInt(e.target.dataset.increment)
 
-    if (!increment) {
-      return
+    if (increment) {
+      let num       = this.calcNum(increment)
+      this.newSlide = this.slidesMap[num]
+
+      this.container.style.setProperty('--dir', increment)
+      this.moveSlides()
+      this.updateProductDetails(num)
+      this.removeClass(num)
     }
-
-    let num       = this.calcNum(increment)
-    this.newSlide = this.slidesMap[num]
-
-    this.setCssVariable(increment)
-    this.moveSlides()
-    this.updateProductDetails(num)
-    this.removeClass(num)
   }
 
   calcNum(increment) {
@@ -70,15 +68,6 @@ export default class Controls {
     }
 
     return num
-  }
-
-  setCssVariable(increment) {
-    if (increment === 1) {
-      this.container.style.setProperty('--dir', '1');
-    }
-    else {
-      this.container.style.setProperty('--dir', '-1');
-    }
   }
 
   moveSlides() {
@@ -106,7 +95,7 @@ export default class Controls {
       this.productDetails.classList.remove('-enter')
 
       this.setActive(n)
-    }, this.transitionDur)
+    }, this.transitionDur + 50)
   }
 
   setActive(n) {
