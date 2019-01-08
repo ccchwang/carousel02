@@ -22,7 +22,7 @@
 .product-name,
 .product-price {
   .-enter & {
-    animation: enterText ($transition-dur / 2 + 0.3) forwards;
+    animation: enterText ($transition-dur / 2 + 0.3) both;
   }
 
   .-exit & {
@@ -30,4 +30,8 @@
     transform: translateY($position2-text);
     transition: ($transition-dur / 2);
   }
+}
+
+.product-price {
+  animation-delay: 0.5s !important;
 }

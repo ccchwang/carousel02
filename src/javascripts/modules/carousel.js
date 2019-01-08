@@ -39,7 +39,7 @@ export default class Controls {
   bindEvents() {
     this.el.addEventListener('click', throttle(
       this.onClick,
-      this.transitionDur + 50
+      this.transitionDur + 100
     ))
   }
 
