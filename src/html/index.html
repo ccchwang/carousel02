@@ -1,7 +1,7 @@
 {% extends 'layouts/application.html' %}
 
 {% block content %}
-<div id="container">
+<div id="container" class="container">
   <div class="products">
     {% for product in products %}
       <div class="product p-{{ loop.index }} {% if loop.index === 1 %}-active{% endif %}">

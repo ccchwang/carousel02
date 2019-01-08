@@ -8,5 +8,6 @@ $position2-text: calc(-20px * var(--dir));
 @import "base/reset";
 @import "base/typography";
 
+@import "components/layout";
 @import "components/products";
 @import "components/description";

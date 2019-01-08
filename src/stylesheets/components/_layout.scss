@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.products,
+.description {
+  flex-basis: 50%;
+}
