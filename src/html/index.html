@@ -5,8 +5,8 @@
   <div class="products">
     {% for product in products %}
       <div class="product {% if loop.index === 1 %}-active{% endif %}">
-        <img src="/images/{{ product.imageFile }}">
-        <p>{{ loop.index }} {{ product.name }}</p>
+        <img src="/images/{{ product.image }}">
+        <p class="emphasis-text">{{ product.size }}</p>
       </div>
     {% endfor %}
   </div>
@@ -17,7 +17,7 @@
       <button class="control -next" data-increment="1">Next</button>
     </div>
 
-    <h1 class="title">Shop</h1>
+    <h1 class="emphasis-text">Shop</h1>
 
     <div id="product-details">
       <h2 class="product-name">{{ products[0].name }}</h2>

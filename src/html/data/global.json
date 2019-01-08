@@ -1,19 +1,22 @@
 {
   "products": [
     {
-      "name": "Lightweight Rosehip Hydrating Serum",
-      "price": "$56.00",
-      "imageFile": "p-1.png"
-    },
-    {
       "name": "Purifying Facial Cream Cleanser",
       "price": "$42.00",
-      "imageFile": "p-3.png"
+      "image": "p-3.png",
+      "size": "3.4 fl oz"
     },
     {
-      "name": "Chamomile Concentrate Masque",
+      "name": "Lightweight Rosehip Hydrating Serum",
+      "price": "$56.00",
+      "image": "p-1.png",
+      "size": "1 fl oz"
+    },
+    {
+      "name": "Chamomile Aromatique Hand Wash",
       "price": "$39.00",
-      "imageFile": "p-2.png"
+      "image": "p-2.png",
+      "size": "16.9 fl oz"
     }
   ]
 }

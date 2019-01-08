@@ -51,6 +51,7 @@ export default class Controls {
       this.newSlide = this.slidesMap[num]
 
       this.container.style.setProperty('--dir', increment)
+      this.container.classList.toggle('-change-bg')
       this.moveSlides()
       this.updateProductDetails(num)
       this.removeClass(num)

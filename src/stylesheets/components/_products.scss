@@ -5,13 +5,18 @@
 }
 
 .products {
-  background-color: #c0bdbc;
+  align-items: center;
+  background-color: #C0BDBC;
   display: flex;
   justify-content: center;
-  align-items: center;
   overflow: hidden;
-  position: relative;
   perspective: 1000px;
+  position: relative;
+  transition: background-color $transition-dur;
+
+  .-change-bg & {
+    background-color: #CAC8B1;
+  }
 }
 
 .product {
