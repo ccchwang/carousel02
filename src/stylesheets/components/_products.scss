@@ -30,7 +30,7 @@
 
   &.-active,
   &.-exit {
-    transition: $transition-dur $transition-ease;
+    transition: $transition-dur;
   }
 
   &.-active {

@@ -14,7 +14,7 @@ export default class Controls {
     this.slidesLength   = this.slides.length - 1
 
     this.current        = 0
-    this.transitionDur  = 2000
+    this.transitionDur  = 1700
 
     this.container      = document.getElementById('container')
     this.productDetails = document.getElementById('product-details')
@@ -86,7 +86,7 @@ export default class Controls {
       this.productDetails.classList.add('-enter')
       this.productName.innerHTML  = products[n].name
       this.productPrice.innerHTML = products[n].price
-    }, ((this.transitionDur / 2) - 300))
+    }, ((this.transitionDur / 2) + 100))
   }
 
   removeClass(n) {

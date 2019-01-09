@@ -9,7 +9,14 @@
 }
 
 .description {
-  padding: 6.3rem 1rem;
+  align-items: center;
+  display: flex;
+  padding: 1rem;
+
+  > div {
+    margin-bottom: 4rem;
+    width: 100%;
+  }
 }
 
 .product-name,
@@ -17,13 +24,13 @@
   font-weight: 600;
 
   .-enter & {
-    animation: enterText ($transition-dur / 2 + 0.1) both;
+    animation: enterText ($transition-dur / 2 - 0.2) both;
   }
 
   .-exit & {
     opacity: 0;
     transform: translateY($position2-text);
-    transition: ($transition-dur / 2 - 0.2) $transition-ease;
+    transition: ($transition-dur / 2 + 0.2) $transition-ease;
   }
 }
 
@@ -35,7 +42,7 @@
 
 .product-price {
   // 0.7 comes from setTimeout that adds ".-enter"
-  animation-delay: $transition-dur - 0.7 - ($transition-dur / 2 + 0.1) !important;
+  animation-delay: 0.2s !important;
   font-size: 0.875rem;
   letter-spacing: 0.05em;
 }

@@ -1,5 +1,5 @@
-$transition-dur : 2s;
-$transition-ease: cubic-bezier(0.39, 0.575, 0.565, 1);
+$transition-dur : 1.7s;
+$transition-ease: ease-out;
 
 $position1-img  : calc(100px * var(--dir));
 $position2-img  : calc(-600px * var(--dir));
