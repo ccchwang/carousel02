@@ -11,10 +11,10 @@
 .description {
   align-items: center;
   display: flex;
-  padding: 1rem;
+  padding: 1.5rem;
 
   > div {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     width: 100%;
   }
 }
@@ -35,19 +35,18 @@
 }
 
 .product-name {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.2;
   margin-top: 1rem;
 }
 
 .product-price {
-  // 0.7 comes from setTimeout that adds ".-enter"
   animation-delay: 0.2s !important;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   letter-spacing: 0.05em;
 }
 
 .product-subtitle {
   @include emphasis-text;
-  margin: 2.25rem 0;
+  margin: 2.5rem 0;
 }
