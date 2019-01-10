@@ -24,6 +24,10 @@
   position: absolute;
   opacity: 0;
 
+  img {
+    width: 350px;
+  }
+
   &.-active,
   &.-exit {
     transition: $transition-dur;
