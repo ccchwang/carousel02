@@ -2,8 +2,8 @@
   "name": "carousel02",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:chloehwang/carousel02.git",
-  "author": "Chloe Hwang <c.chloeh@gmail.com>",
+  "repository": "git@github.com:ccchwang/carousel02.git",
+  "author": "Cho Hwang",
   "license": "MIT",
   "scripts": {
     "start": "yarn run blendid"
